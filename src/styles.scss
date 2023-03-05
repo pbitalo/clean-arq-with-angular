@@ -1,0 +1,34 @@
+@import './styles/scrollbar.scss';
+@import './styles/transition.scss';
+@import './styles/retract-components.scss';
+@import './variables.scss';
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+mat-form-field {
+  .mat-mdc-text-field-wrapper {
+    height: 43px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white !important;
+  }
+}
+
+.icon {
+  color: $color-icon;
+  font-size: $icon-face-length;
+  width: $icon-face-length;
+  height: $icon-face-length;
+  cursor: pointer;
+  @include transition();
+}

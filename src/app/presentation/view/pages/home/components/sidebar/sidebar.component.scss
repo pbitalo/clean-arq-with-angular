@@ -1,0 +1,36 @@
+@import '../../../../../../../styles/box-shadow.scss'; // Arrumar solução para path
+@import '../../../../../../../styles/flex-mixin.scss';
+@import '../../../../../../../styles/transition.scss';
+@import '../../../../../../../variables.scss';
+
+@import '../../../../../../../styles/sidebar.scss';
+@import '../../../../../../../styles/header.scss';
+
+$color-primary: rgb(63, 81, 181);
+
+.sidebar-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: $sidebar-open-width;
+  background-color: $color-blue-default;
+  height: 100vh;
+  @include box-shadow();
+  z-index: 1;
+  @include transition();
+
+  .sidebar-header {
+    height: $header-height;
+    @include insert-flex();
+    border-bottom: $line-default;
+    margin: 0 toRem(16);
+  }
+}
+
+.retract-sidebar {
+  width: $sidebar-close-width;
+}
+
+.move-icon {
+  transform: rotateZ(90deg);
+}

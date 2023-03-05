@@ -1,0 +1,23 @@
+<header class="header-container" [ngClass]="{ 'retract-header': isOpen }">
+  <nav>
+    <section class="field-search">
+      <mat-form-field appearance="fill">
+        <mat-label>Setor</mat-label>
+
+        <mat-select>
+          <mat-option *ngFor="let item of sector" [value]="item.value">
+            {{ item.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </section>
+
+    <section class="field-options">
+      <div class="c-avatar">
+        <img src="/assets/icons/LogoZord3.svg" alt="logo zord" width="75px" height="38px" />
+        <hr />
+        <mat-icon class="icon-face">face</mat-icon>
+      </div>
+    </section>
+  </nav>
+</header>

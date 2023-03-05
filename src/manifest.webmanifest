@@ -1,0 +1,17 @@
+{
+  "name": "sys-zord",
+  "short_name": "sys-zord",
+  "theme_color": "#1976d2",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/icons/LogoZord3.svg",
+      "sizes": "150x75",
+      "type": "image/svg",
+      "purpose": "maskable any"
+    }
+  ]
+}

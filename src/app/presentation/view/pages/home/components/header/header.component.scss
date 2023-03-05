@@ -1,0 +1,55 @@
+@import '../../../../../../../styles/sidebar.scss';
+@import '../../../../../../../styles/header.scss';
+
+@import '../../../../../../../styles/transition.scss';
+@import '../../../../../../../styles/flex-mixin.scss';
+
+$padding-default: toRem(24);
+
+.header-container {
+  position: absolute;
+  width: calc(100% - $sidebar-open-width);
+  left: $sidebar-open-width;
+  height: $header-height;
+  @include box-shadow();
+  top: 0;
+  background-color: white;
+  @include transition();
+  nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include insert-flex('space-between');
+    .field-search {
+      position: relative;
+      margin-left: $padding-default;
+      top: 11px;
+    }
+    .field-options {
+      .c-avatar {
+        @include insert-flex();
+        cursor: pointer;
+        hr {
+          position: relative;
+          height: 40px;
+          width: 1px;
+          margin: 0 $padding-default;
+          background-color: $color-line-default;
+        }
+      }
+    }
+  }
+}
+
+.retract-header {
+  width: calc(100% - $sidebar-close-width);
+  left: $sidebar-close-width;
+}
+
+.icon-face {
+  font-size: toRem(32);
+  width: toRem(32);
+  height: toRem(32);
+  margin-right: $padding-default;
+  color: rgb(85, 85, 85);
+}
