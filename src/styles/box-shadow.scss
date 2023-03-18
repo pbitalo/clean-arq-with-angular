@@ -8,7 +8,7 @@
 
 @import './add-prefix.scss';
 
-@mixin box-shadow($x: 0px, $y: 0px, $blur: 25px, $color: rgba(0, 0, 0, 0.3), $inset: '') {
+@mixin box-shadow($x: 0px, $y: 0px, $blur: 25px, $color: rgba(0, 0, 0, 0.275), $inset: '') {
   @if ($inset != '') {
     @include add-prefix('box-shadow', $inset $x $y $blur $color);
   } @else {

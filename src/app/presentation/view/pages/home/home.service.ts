@@ -1,16 +1,42 @@
-import { Injectable } from '@angular/core'
+import { Injectable, OnInit } from '@angular/core'
 
-import { BehaviorSubject } from 'rxjs'
+import { BehaviorSubject, catchError, of } from 'rxjs'
+import { ajax } from 'rxjs/ajax'
+import { UserEntity, UserPermissions } from 'src/app/domain/entities/user-entity'
 
 @Injectable({
   providedIn: 'root',
 })
 export class HomeService {
-  private _isSideBarOpen = new BehaviorSubject<boolean>(false)
+  private _user = new BehaviorSubject<UserEntity>({
+    name: '',
+    permission: UserPermissions.common,
+    uuid: '',
+  })
+  public getUser$ = this._user.asObservable()
 
+  private _isSideBarOpen = new BehaviorSubject<boolean>(false)
   public isSideBarOpen$ = this._isSideBarOpen.asObservable()
 
-  setOpen(val: boolean): void {
+  private _sectors = new BehaviorSubject<Array<any>>([]) // tipar
+  public getSectors$ = this._sectors.asObservable()
+
+  private _sectorId = new BehaviorSubject<string>('')
+  public getSectorId$ = this._sectorId.asObservable()
+
+  setOpen(val: boolean) {
     this._isSideBarOpen.next(val)
+  }
+
+  setSector(id: string) {
+    this._sectorId.next(id)
+  }
+
+  setUser(user: UserEntity) {
+    this._user.next(user)
+  }
+
+  setSectors(sector: any) {
+    this._sectors.next(sector)
   }
 }

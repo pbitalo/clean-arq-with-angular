@@ -10,7 +10,9 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: $font-family-poppins;
+  font-size: $font-size-large;
+  font-style: normal;
 }
 
 mat-form-field {
@@ -31,4 +33,8 @@ mat-form-field {
   height: $icon-face-length;
   cursor: pointer;
   @include transition();
+}
+
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+  top: 31px;
 }

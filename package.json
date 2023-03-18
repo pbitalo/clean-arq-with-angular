@@ -1,7 +1,7 @@
 {
-  "name": "sys-zord",
-  "description": "Zord System - Zup's internal process automation system.",
-  "author": "Ítalo Pereira de Brito (zupper)",
+  "name": "clean-arq-with-angular-io",
+  "description": "This system is a example the clean arq using angular IO.",
+  "author": "Ítalo Pereira de Brito.",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",

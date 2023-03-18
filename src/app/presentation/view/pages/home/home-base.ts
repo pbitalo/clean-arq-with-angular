@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { FormGroup } from '@angular/forms'
+
 import { HomeService } from './home.service'
 
 @Component({
@@ -7,13 +9,13 @@ import { HomeService } from './home.service'
 export abstract class HomeBase implements OnInit {
   isOpen = false
 
-  constructor(private homeService: HomeService) {}
+  constructor(protected homeService: HomeService) {}
 
   ngOnInit() {
     this.homeService.isSideBarOpen$.subscribe((next: boolean) => (this.isOpen = next))
   }
 
-  toogleSidebar() {
+  toogleSidebar(): void {
     this.homeService.setOpen(!this.isOpen)
   }
 }

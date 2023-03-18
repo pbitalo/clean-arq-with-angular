@@ -11,9 +11,11 @@ import { HeaderComponent } from './components/header/header.component'
 import { SidebarComponent } from './components/sidebar/sidebar.component'
 import { HomeRoutingModule } from './home-routing.module'
 import { HomeService } from './home.service'
+import { ListOptionsComponent } from './components/sidebar/list-options/list-options.component'
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, SidebarComponent],
+  declarations: [HomeComponent, HeaderComponent, SidebarComponent, ListOptionsComponent],
   imports: [
     CommonModule,
     MatIconModule,
@@ -21,6 +23,7 @@ import { HomeService } from './home.service'
     MatSelectModule,
     MatTooltipModule,
     HomeRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [HomeService],
 })

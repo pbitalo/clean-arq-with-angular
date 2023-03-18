@@ -1,12 +1,10 @@
-@import '../../../../../../../styles/box-shadow.scss'; // Arrumar solução para path
-@import '../../../../../../../styles/flex-mixin.scss';
-@import '../../../../../../../styles/transition.scss';
-@import '../../../../../../../variables.scss';
+@import '/src/styles/box-shadow.scss'; // Arrumar solução para path
+@import '/src/styles/flex-mixin.scss';
+@import '/src/styles/transition.scss';
+@import '/src/variables.scss';
 
-@import '../../../../../../../styles/sidebar.scss';
-@import '../../../../../../../styles/header.scss';
-
-$color-primary: rgb(63, 81, 181);
+@import '/src/styles/sidebar.scss';
+@import '/src/styles/header.scss';
 
 .sidebar-container {
   position: absolute;
@@ -25,6 +23,36 @@ $color-primary: rgb(63, 81, 181);
     border-bottom: $line-default;
     margin: 0 toRem(16);
   }
+
+  .sidebar-menu {
+    position: relative;
+    height: calc(100vh - 76px);
+    overflow: auto;
+    ul {
+      list-style: none;
+      padding: 0 16px;
+      li {
+        .c-sector {
+          border-bottom: $line-default;
+          position: relative;
+          @include insert-flex('center', 'flex-start');
+          flex-direction: column;
+          margin-bottom: toRem(24);
+          width: 100%;
+          .c-description {
+            @include insert-flex();
+            width: 100%;
+            color: rgb(220, 220, 220);
+            text-transform: uppercase;
+          }
+          app-list-options {
+            position: relative;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 .retract-sidebar {
@@ -33,4 +61,14 @@ $color-primary: rgb(63, 81, 181);
 
 .move-icon {
   transform: rotateZ(90deg);
+}
+
+@media (max-width: $break-point) {
+  .icon {
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  .c-description {
+    display: none !important;
+  }
 }

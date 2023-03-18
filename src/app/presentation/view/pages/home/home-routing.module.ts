@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
 
-import { AccountancyComponent } from '../accountancy/accountancy.component'
-import { InvoicingComponent } from '../invoicing/invoicing.component'
 import { HomeComponent } from './home.component'
+import { InvoicingComponent } from '../invoicing/invoicing.component'
+import { AccountancyComponent } from '../accountancy/accountancy.component'
 
 const routes: Routes = [
   {
@@ -13,8 +13,14 @@ const routes: Routes = [
       title: 'Home',
     },
     children: [
-      { path: 'invoicing', component: InvoicingComponent },
-      { path: 'accountancy', component: AccountancyComponent },
+      {
+        path: 'invoicing',
+        component: InvoicingComponent,
+      },
+      {
+        path: 'accountancy',
+        component: AccountancyComponent,
+      },
     ],
   },
 ]

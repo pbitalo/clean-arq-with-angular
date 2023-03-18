@@ -10,6 +10,6 @@
   @if length($properties) >= 1 {
     @include add-prefix('transition', to-string($properties, ' '));
   } @else {
-    @include add-prefix('transition', 'all 0.2s ease-in-out 0.2s');
+    @include add-prefix('transition', 'all 0.2s ease-out 0.2s');
   }
 }
