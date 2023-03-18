@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sys-zord": {
+    "clean-arq-with-angular-io": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sys-zord",
+            "outputPath": "dist/clean-arq-with-angular-io",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sys-zord:build:production"
+              "browserTarget": "clean-arq-with-angular-io:build:production"
             },
             "development": {
-              "browserTarget": "sys-zord:build:development"
+              "browserTarget": "clean-arq-with-angular-io:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sys-zord:build"
+            "browserTarget": "clean-arq-with-angular-io:build"
           }
         },
         "test": {

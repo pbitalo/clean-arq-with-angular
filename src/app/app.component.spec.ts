@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy()
   })
 
-  it(`should have as title 'sys-zord'`, () => {
+  it(`should have as title 'clean-arq-with-angular-io'`, () => {
     const fixture = TestBed.createComponent(AppComponent)
     const app = fixture.componentInstance
-    expect(app.title).toEqual('sys-zord')
+    expect(app.title).toEqual('clean-arq-with-angular-io')
   })
 
   it('should render title', () => {
@@ -27,7 +27,7 @@ describe('AppComponent', () => {
     fixture.detectChanges()
     const compiled = fixture.nativeElement as HTMLElement
     expect(compiled.querySelector('.content span')?.textContent).toContain(
-      'sys-zord app is running!'
+      'clean-arq-with-angular-io app is running!'
     )
   })
 })

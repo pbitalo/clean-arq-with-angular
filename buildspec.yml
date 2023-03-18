@@ -13,4 +13,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'dist/my-angular-app'
+  base-directory: 'dist/clean-arq-with-angular-io'

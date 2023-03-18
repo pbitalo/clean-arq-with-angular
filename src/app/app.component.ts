@@ -6,5 +6,5 @@ import { Component } from '@angular/core'
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'sys-zord'
+  title = 'clean-arq-with-angular-io'
 }
